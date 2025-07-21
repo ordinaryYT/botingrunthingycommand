@@ -4,7 +4,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/run', methods=['GET'])
+@app.route('/')
+def home():
+    return "Bot is live. Use /run to trigger it."
+
+@app.route('/run')
 def run_bot():
     email = os.getenv("FNL_EMAIL")
     password = os.getenv("FNL_PASSWORD")
@@ -34,4 +38,5 @@ def run_bot():
     return "Command sent: floss"
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
