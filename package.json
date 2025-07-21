@@ -1,0 +1,16 @@
+{
+  "name": "discord-puppeteer-bot",
+  "version": "1.0.0",
+  "description": "Discord bot that uses Puppeteer to automate website tasks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.0.3",
+    "puppeteer": "^20.0.0",
+    "dotenv": "^16.0.3"
+  }
+}
